@@ -19,7 +19,7 @@ import {
   ShieldCheck
 } from "lucide-react";
 import { AgentSettings, AgentThoughtLog, CandidateProfile, DailyReport, JobApplication, NavigationTab, RecruiterThread } from "../types";
-import { getPhaseColor } from "../utils";
+import { formatCurrency, getPhaseColor } from "../utils";
 
 interface LiveAgentDashboardProps {
   settings: AgentSettings;
@@ -232,6 +232,36 @@ export const LiveAgentDashboard: React.FC<LiveAgentDashboardProps> = ({
               193 recruiter views
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Quick Setup Strip: Resume, Target Roles & Portals */}
+      <div className="p-4 sm:p-5 rounded-2xl bg-indigo-50/80 border border-indigo-200 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div className="space-y-1">
+          <div className="flex items-center gap-2">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-indigo-900 bg-indigo-200/70 px-2 py-0.5 rounded">
+              Active Candidate Data
+            </span>
+            <span className="text-xs font-bold text-slate-900">{candidateProfile.name} ({candidateProfile.title})</span>
+          </div>
+          <p className="text-xs text-slate-600">
+            Targeting: <strong className="text-indigo-950">{(candidateProfile.targetRoles || ["Staff Software Engineer"]).slice(0, 3).join(", ")}</strong> • Floor: <strong>{formatCurrency(candidateProfile.salaryFloor)}</strong> • Portals: <strong className="text-emerald-700">LinkedIn, Gmail, Naukri, Indeed</strong>
+          </p>
+        </div>
+
+        <div className="flex items-center gap-2 shrink-0">
+          <button
+            onClick={() => setActiveTab && setActiveTab("resume_tailor")}
+            className="px-3.5 py-2 rounded-xl text-xs font-bold bg-white text-indigo-700 hover:bg-slate-50 border border-indigo-200 shadow-2xs transition cursor-pointer"
+          >
+            Upload Resume
+          </button>
+          <button
+            onClick={() => setActiveTab && setActiveTab("settings")}
+            className="px-3.5 py-2 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white shadow-xs transition cursor-pointer"
+          >
+            Edit Roles & Portals
+          </button>
         </div>
       </div>
 

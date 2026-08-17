@@ -1,3 +1,19 @@
+export interface PortalIntegration {
+  id: string;
+  name: string;
+  category: "Job Board" | "Email" | "Professional Network" | "Code Portfolio";
+  icon: string;
+  isConnected: boolean;
+  lastSynced?: string;
+  credentials: {
+    usernameOrEmail?: string;
+    apiKeyOrToken?: string;
+    targetKeywords?: string;
+    autoApplyEnabled?: boolean;
+    autoSyncInbox?: boolean;
+  };
+}
+
 export interface CandidateProfile {
   name: string;
   title: string;
@@ -36,6 +52,7 @@ export interface CandidateProfile {
   githubUrl: string;
   linkedinUrl: string;
   portfolioUrl: string;
+  portalIntegrations?: PortalIntegration[];
 }
 
 export type ApplicationStatus =

@@ -85,7 +85,90 @@ export const initialCandidateProfile: CandidateProfile = {
   resumePdfName: "Alex_Chen_Staff_FullStack_AI_Resume.pdf",
   githubUrl: "https://github.com/alexchen-dev",
   linkedinUrl: "https://linkedin.com/in/alexchen-staff-engineer",
-  portfolioUrl: "https://alexchen.dev"
+  portfolioUrl: "https://alexchen.dev",
+  portalIntegrations: [
+    {
+      id: "linkedin",
+      name: "LinkedIn",
+      category: "Professional Network",
+      icon: "linkedin",
+      isConnected: true,
+      lastSynced: "Today, 04:15 AM",
+      credentials: {
+        usernameOrEmail: "alex.chen.dev@gmail.com",
+        apiKeyOrToken: "li_at_session_token_••••••••",
+        targetKeywords: "Staff Engineer, React 19, TypeScript, AI",
+        autoApplyEnabled: true,
+        autoSyncInbox: true
+      }
+    },
+    {
+      id: "gmail",
+      name: "Gmail / Google Workspace",
+      category: "Email",
+      icon: "mail",
+      isConnected: true,
+      lastSynced: "12 mins ago",
+      credentials: {
+        usernameOrEmail: "alex.chen.dev@gmail.com",
+        apiKeyOrToken: "gsuite_oauth_token_••••••••",
+        autoSyncInbox: true
+      }
+    },
+    {
+      id: "naukri",
+      name: "Naukri / FastForward",
+      category: "Job Board",
+      icon: "briefcase",
+      isConnected: true,
+      lastSynced: "Yesterday, 11:30 PM",
+      credentials: {
+        usernameOrEmail: "alex.chen.naukri@gmail.com",
+        apiKeyOrToken: "naukri_auth_key_••••••••",
+        targetKeywords: "Senior Full Stack, Remote Lead",
+        autoApplyEnabled: true
+      }
+    },
+    {
+      id: "indeed",
+      name: "Indeed & Glassdoor",
+      category: "Job Board",
+      icon: "search",
+      isConnected: true,
+      lastSynced: "Today, 03:40 AM",
+      credentials: {
+        usernameOrEmail: "alex.chen.dev@gmail.com",
+        targetKeywords: "Staff AI Engineer, Principal Engineer $180k+",
+        autoApplyEnabled: true
+      }
+    },
+    {
+      id: "wellfound",
+      name: "Wellfound (AngelList Talent)",
+      category: "Job Board",
+      icon: "zap",
+      isConnected: true,
+      lastSynced: "Today, 02:10 AM",
+      credentials: {
+        usernameOrEmail: "alexchen-dev",
+        apiKeyOrToken: "wf_api_key_••••••••",
+        targetKeywords: "Series A-C Startups, AI Infra",
+        autoApplyEnabled: true
+      }
+    },
+    {
+      id: "github",
+      name: "GitHub Developer Sync",
+      category: "Code Portfolio",
+      icon: "github",
+      isConnected: true,
+      lastSynced: "1 hour ago",
+      credentials: {
+        usernameOrEmail: "alexchen-dev",
+        apiKeyOrToken: "ghp_oauth_token_••••••••"
+      }
+    }
+  ]
 };
 
 export const initialAgentSettings: AgentSettings = {
