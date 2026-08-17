@@ -1,0 +1,6 @@
+{
+  "name": "Agentic AI 24/7 Job Hunter & Recruiter Copilot",
+  "description": "Autonomous 24/7 agentic AI that scouts and applies to jobs while you sleep, engages HRs and recruiters with human-like reasoning, live-tailors resumes, and maintains your professional social presence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
